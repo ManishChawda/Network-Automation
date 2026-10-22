@@ -1,0 +1,21 @@
+all:
+  hosts:
+    MCP-SW-2530:
+      ansible_host: SWITCH_MGMT_IP
+      tftp_server: TFTP_SERVER_IP
+      ansible_user: "{{ vault_mcp_username }}"
+      ansible_password: "{{ vault_mcp_password }}"
+      ansible_port: 2222
+
+    GRKL-SW-2530:
+      ansible_host: SWITCH_MGMT_IP
+      tftp_server: TFTP_SERVER_IP
+      ansible_user: "{{ vault_grkl_username }}"
+      ansible_password: "{{ vault_grkl_password }}"
+      ansible_port: 2222
+
+  vars:
+    ansible_connection: network_cli
+    ansible_network_os: arubanetworks.aos_switch.arubaos
+    ansible_command_timeout: 60
+    ansible_ssh_common_args: "-o KexAlgorithms=+diffie-hellman-group1-sha1 -o HostKeyAlgorithms=+ssh-rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"

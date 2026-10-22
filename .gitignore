@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/*.log
+
+# Ansible
+*.retry
+
+# Backup files
+*.bak
+*.tmp
+backups/
+
+# Sensitive files
+*.key
+*.pem
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ansible Vault Credentials
+inventory/vault.yml
