@@ -24,3 +24,9 @@ Thumbs.db
 
 # Ansible Vault Credentials
 inventory/vault.yml
+
+# Local files excluded from GitHub
+inventory/cisco-aruba-switches.yml
+inventory/mcp-grkl-sw-2530-Local.yml
+playbooks/cisco-aruba-switches.yml
+playbooks/mcp-grkl-sw-2530-Local.yml
